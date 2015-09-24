@@ -1,0 +1,34 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title>Freddy the slashers website!!</title>
+       
+        
+    </head>
+   
+    <body> 
+    <header>Frank Freddy </header>
+    <p>I'm a creator, I create things.</p>
+
+    <div id='all contents'> 
+            <nav>
+                 <header> Welcome To My Neptune Estate.</header>
+                <ul>
+                    <li><a href="http:www.gamestop.com">Home</a></li>
+                    <li><a href="http:www.google.com">Portfolio</a></li>
+                    <li><a href="http:www.walart.com">About</a></li>
+            </ul>
+            </nav>
+                
+            <main>
+               <div class='content'>
+                   <header>Portfolio</header>
+                   <ul id='portfolio'></ul>
+               </div>
+            </main>
+       </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script id="portfolioScript">$(document).ready(function() {$.getJSON('projects/projects.json').then(function(data) { data.projects.forEach(function(project){ $('#portfolio').append('<li><a href="projects/' + project.name + '/">' + project.title + ' : ' + project.description + '</a></li>'); }); }); });</script>
+    </body>
+</html>
+                
